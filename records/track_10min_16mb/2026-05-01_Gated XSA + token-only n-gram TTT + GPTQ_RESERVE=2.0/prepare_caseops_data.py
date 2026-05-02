@@ -116,7 +116,7 @@ def main() -> None:
     ap.add_argument("--docs", required=True, type=pathlib.Path, help="Path to docs_selected.jsonl")
     ap.add_argument("--out",  required=True, type=pathlib.Path, help="Output datasets dir")
     ap.add_argument("--sp",   required=True, type=pathlib.Path, help="Path to CaseOps SP model")
-    ap.add_argument("--val-docs", type=int, default=10_000, help="Validation docs count")
+    ap.add_argument("--val-docs", type=int, default=50_000, help="Validation docs count")
     args = ap.parse_args()
 
     sp = spm.SentencePieceProcessor(model_file=str(args.sp))
